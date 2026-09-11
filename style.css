@@ -509,40 +509,56 @@ section {
 
 .projects {
     display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(250px, 1fr));
-
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 .project {
     background: var(--card-color);
-
-    padding: 25px;
-
-    border-radius: 10px;
-
     border: 1px solid var(--border-color);
-
-    transition: 0.3s;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    transition: 0.3s ease;
 }
 
-.project:hover {
-    border-color: var(--purple);
-
-    transform: translateY(-5px);
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-.project h3 {
-    color: var(--purple);
+.project:hover img {
+    transform: scale(1.1);
+}
 
+.project-context {
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* Title */
+.project-context h3 {
+    color: var(--text-color);
     margin-bottom: 10px;
+    transition: color 0.3s ease;
 }
 
-.project p {
+/* Title turns purple when hovering the link */
+.project-context h3:hover {
+    color: var(--purple);
+}
+
+/* Description */
+.project-context p {
     color: var(--secondary-text);
 }
+
+
 
 
 /* PROJECT LINKS */
@@ -551,12 +567,9 @@ section {
 .project-link:hover,
 .project-link:visited,
 .project-link:active {
-
     text-decoration: none;
-
     color: inherit;
 }
-
 
 /* =========================
    CONTACT

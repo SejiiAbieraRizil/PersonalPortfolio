@@ -5,7 +5,7 @@ const texts = [
 ];
 
 const typingText = document.getElementById("typing-text");
-
+ 
 let textIndex = 0;
 let charIndex = 0;
 let deleting = false;

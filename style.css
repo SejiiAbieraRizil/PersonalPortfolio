@@ -456,7 +456,7 @@ section {
 
 .section-title {
     text-align: center;
-    font-size: clamp(80px, 5vw, 64px);
+    font-size: clamp(2rem, 5vw, 4rem);
     font-weight: 900;
     margin-bottom: 40px;
     letter-spacing: 4px;
@@ -864,28 +864,115 @@ footer {
    MOBILE
    ========================= */
 
-@media (max-width: 700px) {
+@media (max-width: 960px) {
 
     header {
         flex-direction: column;
-
-        gap: 15px;
+        gap: 12px;
+        padding: 14px 5%;
     }
 
     nav {
-        gap: 15px;
-
+        gap: 12px;
         flex-wrap: wrap;
-
         justify-content: center;
     }
 
     nav a {
-        font-size: 14px;
+        font-size: 13px;
+    }
+
+    section {
+        min-height: 0;
+        padding: 56px 6%;
+    }
+
+    .section-title {
+        font-size: clamp(2rem, 8vw, 3rem);
+        letter-spacing: 2px;
+        margin-bottom: 28px;
+    }
+
+    .hero {
+        min-height: 0;
+        flex-direction: column;
+        justify-content: center;
+        gap: 28px;
+        padding: 48px 6% 40px;
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
     }
 
     .hero h1 {
-        font-size: 40px;
+        font-size: clamp(2.25rem, 10vw, 2.75rem);
+    }
+
+    .hero-description {
+        margin: 0 auto 25px;
+    }
+
+    .hero-description br {
+        display: none;
+    }
+
+    .resume-buttons,
+    .social-links {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        align-items: center;
+    }
+
+    .hero-image img {
+        width: min(100%, 300px);
+        height: auto;
+        max-height: 360px;
+        object-fit: contain;
+    }
+
+    .background-word {
+        display: none;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .about-image {
+        flex: 0 1 auto;
+        width: 100%;
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-image img {
+        width: min(100%, 300px);
+        height: auto;
+        max-height: 320px;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-text .section-title {
+        margin-bottom: 12px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .contact-item a {
+        overflow-wrap: anywhere;
     }
 
     .theme-toggle {
@@ -895,6 +982,27 @@ footer {
 
     .theme-toggle .material-symbols-outlined {
         font-size: 20px;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 960px) {
+    header {
+        flex-direction: row;
+        padding: 14px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    nav {
+        flex-wrap: nowrap;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
     }
 }
 
